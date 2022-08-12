@@ -17,16 +17,10 @@ view: bitcoin {
   }
 
   dimension: date {
-    hidden:  yes
-    type: string
-    sql: ${TABLE}.Date ;;
-  }
-
-  dimension: op_date {
-    hidden: no
+    hidden:  no
     type: date
     datatype: date
-    sql: CAST(${TABLE}.Date as date);;
+    sql: CAST(${TABLE}.Date AS date);;
   }
 
   dimension: high {
