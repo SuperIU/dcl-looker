@@ -17,8 +17,9 @@ view: bitcoin2 {
   }
 
   dimension: date {
-    type: string
-    sql: ${TABLE}.Date ;;
+    type: date
+    datatype: date
+    sql: CAST(${TABLE}.Date AS date) ;;
   }
 
   dimension: high {

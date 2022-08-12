@@ -29,7 +29,19 @@ explore: bitcoin {}
 
 explore: etl_table {}
 
-explore: bitcoin2 {}
+explore: bitcoin2 {
+  join: bitcoin {
+    type: left_outer
+    sql_on: ${bitcoin2.date} = ${bitcoin.date} ;;
+    relationship: many_to_one
+  }
+}
+
+explore: derived_test {
+  always_filter: {
+    filters: [derived_test.date: "3 years"]
+  }
+}
 
 explore: s_air_quality_who_2016 {}
 

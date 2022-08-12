@@ -17,7 +17,6 @@ view: bitcoin {
   }
 
   dimension: date {
-    hidden:  no
     type: date
     datatype: date
     sql: CAST(${TABLE}.Date AS date);;
