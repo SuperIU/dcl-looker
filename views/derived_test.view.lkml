@@ -6,8 +6,7 @@ view: derived_test {
         open,
         close
       FROM
-        bitcoin
-      ;;
+        bitcoin ;;
   }
   dimension: date {
     type: date
