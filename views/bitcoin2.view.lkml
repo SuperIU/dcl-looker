@@ -23,17 +23,17 @@ view: bitcoin2 {
   }
 
   dimension: high {
-    type: string
+    type: number
     sql: ${TABLE}.High ;;
   }
 
   dimension: low {
-    type: string
+    type: number
     sql: ${TABLE}.Low ;;
   }
 
   dimension: open {
-    type: string
+    type: number
     sql: ${TABLE}.Open ;;
   }
 
@@ -43,12 +43,12 @@ view: bitcoin2 {
   }
 
   dimension: volume_btc {
-    type: string
+    type: number
     sql: ${TABLE}.Volume_BTC ;;
   }
 
   dimension: volume_usd {
-    type: string
+    type: number
     sql: ${TABLE}.Volume_USD ;;
   }
 
