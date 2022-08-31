@@ -56,4 +56,25 @@ view: bitcoin2 {
     type: count
     drill_fields: []
   }
+
+  measure: test {
+    type: number
+    sql:  ${TABLE}.High ;;
+    value_format_name: decimal_0
+    html: {{rendered_value}}
+      <ul>
+      <li> {{rendered_value}} </li>
+      </ul>;;
+  }
+
+  measure: test2 {
+    type: number
+    sql:  ${TABLE}.Low ;;
+    value_format_name: decimal_0
+    html:
+      <ul>
+      <li> {{rendered_value}} </li>
+      </ul>;;
+  }
+
 }
