@@ -10,7 +10,8 @@ view: derived_test {
   }
   dimension: date {
     type: date
-    sql: ${TABLE}.date ;;
+    datatype: date
+    sql: CAST(${TABLE}.Date AS date) ;;
   }
   dimension: open {
     type: string
