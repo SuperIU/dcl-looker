@@ -12,7 +12,8 @@ view: bitcoin2 {
   # This dimension will be called "Close" in Explore.
 
   dimension: close {
-    type: string
+    type: number
+    value_format:"$#,###.00"
     sql: ${TABLE}.Close ;;
   }
 
@@ -24,16 +25,19 @@ view: bitcoin2 {
 
   dimension: high {
     type: number
+    value_format:"$#,###.00"
     sql: ${TABLE}.High ;;
   }
 
   dimension: low {
     type: number
+    value_format:"$#,###.00"
     sql: ${TABLE}.Low ;;
   }
 
   dimension: open {
     type: number
+    value_format:"$#,###.00"
     sql: ${TABLE}.Open ;;
   }
 
@@ -77,4 +81,8 @@ view: bitcoin2 {
       </ul>;;
   }
 
+  measure: BeHigh{
+    type: number
+    sql:  ${high} ;;
+  }
 }
